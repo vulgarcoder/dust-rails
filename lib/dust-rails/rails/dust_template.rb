@@ -6,7 +6,7 @@ module Dust
 
     module Source
       def self.path
-        @path ||= File.expand_path('../../../../vendor/dustjs/lib/dust.js', __FILE__)
+        @path ||= File.expand_path('../../../../vendor/assets/javascripts/dust-full.js', __FILE__)
       end
 
       def self.contents
@@ -31,6 +31,7 @@ module Dust
       def evaluate(scope, locals, &block)
         template_root = Dust.config.template_root
         template_name = file.split(template_root).last.split('.',2).first
+
         Source.context.call("dust.compile", data, template_name)
       end
     end

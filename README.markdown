@@ -59,6 +59,7 @@ Using `require_tree` is recommended if you want to require all the template file
 	/* app/assets/javascripts/application.js */
 	
 	//= require dust-core
+	//= require dust-helpers
 	//= require_tree ./templates
 	...
 	dust.render("demo", {name: "Fred", count: 10}, function(err, out) {
