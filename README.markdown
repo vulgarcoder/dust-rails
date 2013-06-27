@@ -47,7 +47,7 @@ If you want to change the default root path of template files, add following con
     # config/application.rb
     module YourApp
         class Application < Rails::Application
-            config.dust.template_root = 'app/assets/your_path_to_templates/'
+            config.dust_template_root = 'app/assets/your_path_to_templates/'
         end
     end
 ```
